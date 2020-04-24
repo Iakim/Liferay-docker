@@ -84,6 +84,13 @@ Execute the commands bellow to contruct your container
     docker start iakimv1
     docker exec -u jboss iakimv1 touch /opt/jboss/wildfly/standalone/deployments/ROOT.war.dodeploy
     docker ps -a
+    
+## End Steps
+Log in portal http://localhost:8080/c/portal/login
+
+Go to
+
+    Control Panel -> Configuration -> Search -> Reindex all indexes of search
 
 ## Destroy your container and image
 Execute the commands bellow to destruct your container and your image
