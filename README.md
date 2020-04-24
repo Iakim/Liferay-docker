@@ -65,10 +65,10 @@ Change the cluster name of elasticsearch
 
 # Checkpoint
 
-Docker runs correctly
-Install ElasticSearch 6.5.1 with docker
-Get a clone for the repository https://github.com/Iakim/Liferay-docker.git
-Customization your container with ALL the steps
+- Docker runs correctly
+- Install ElasticSearch 6.5.1 with docker
+- Get a clone for the repository https://github.com/Iakim/Liferay-docker.git
+- Customization your container with ALL the steps
 
 ## Construct your container
 Execute the commands bellow to contruct your container
@@ -81,8 +81,6 @@ Execute the commands bellow to contruct your container
     
 ## End Steps
 Log in portal http://localhost:8080/c/portal/login
-
-Go to
 
     Control Panel -> Configuration -> Search -> Reindex all indexes of search
 
