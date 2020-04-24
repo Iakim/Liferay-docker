@@ -1,4 +1,5 @@
  FROM jboss/wildfly:11.0.0.Final
+ USER root
  RUN mkdir /opt/jboss/java
  COPY jdk1.8.0_181 /opt/jboss/java
  COPY ROOT /opt/jboss/wildfly/standalone/deployments/
@@ -11,3 +12,4 @@
  RUN mkdir /opt/jboss/logs 
  RUN mkdir /opt/jboss/deploy
  RUN mkdir /opt/jboss/work
+ RUN chown -R jboss. /opt/jboss
