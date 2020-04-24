@@ -73,14 +73,7 @@ Customization your container with ALL the steps
 ## Construct your container
 Execute the commands bellow to contruct your container
 
-    docker build -t iakim/liferay-tmp .
-    docker create --name iakimv1 -p 8080:8080 -p 9990:9990 iakim/liferay-tmp:latest
-    docker start iakimv1
-    docker exec -u root iakimv1 chown -R jboss. /opt/jboss
-    docker commit iakimv1 iakim/liferay-docker
-    docker stop iakimv1
-    docker rm iakimv1
-    docker image rm iakim/liferay-tmp
+    docker build -t iakim/liferay-docker .
     docker create --name iakimv1 -p 8080:8080 -p 9990:9990 iakim/liferay-docker:latest
     docker start iakimv1
     docker exec -u jboss iakimv1 touch /opt/jboss/wildfly/standalone/deployments/ROOT.war.dodeploy
