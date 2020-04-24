@@ -13,6 +13,7 @@ The Elasticsearch 6.5.1 is a dependencies and clone this repository
 
     # docker pull docker.elastic.co/elasticsearch/elasticsearch:6.5.1
     # docker create --name iakimv2 -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" docker.elastic.co/elasticsearch/elasticsearch:6.5.1
+    # docker start iakimv2
     # git clone https://github.com/Iakim/Liferay-docker.git
 
 ## Customize your installation
