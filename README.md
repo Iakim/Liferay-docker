@@ -20,7 +20,7 @@ The Elasticsearch 6.5.1 is a dependencies and clone this repository
 
 Copy the folders, of your previous instalation, hypersonic, document_library and elasticsearch6 for data
 
-    # cp -r /opt/you_instalation_liferay_path/data/ data
+    # cp -r /opt/you_instalation_liferay_path/data/* data
 
 Copy your thema for folder DEP/osgi/war/
 
