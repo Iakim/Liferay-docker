@@ -40,7 +40,7 @@ Get IP of elasticsearch container
 
 Change the script for database hypersonic data/hypersonic/lportal.script
 
-    vim data/hypersonic/lportal.script
+    # vim data/hypersonic/lportal.script
 
 #### Change:
 
