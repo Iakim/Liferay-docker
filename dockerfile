@@ -1,7 +1,5 @@
  FROM jboss/wildfly:11.0.0.Final
  USER root
- RUN mkdir /opt/jboss/java
- COPY jdk1.8.0_181 /opt/jboss/java
  COPY ROOT /opt/jboss/wildfly/standalone/deployments/
  COPY modules /opt/jboss/wildfly/modules/
  COPY data /opt/jboss/data/
