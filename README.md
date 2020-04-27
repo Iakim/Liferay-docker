@@ -19,7 +19,7 @@ The Elasticsearch 6.5.1 is a dependencies and clone this repository
 
 ## Customize your installation
 
-Copy the folders, of your previous instalation, hypersoni and document_library for data
+Copy the folders, of your previous instalation, hypersonic and document_library for data
 
     # cp -r /opt/you_instalation_liferay_path/data/hypersonic/* data/hypersonic/
     # cp -r /opt/you_instalation_liferay_path/data/document_library/* data/document_library/
