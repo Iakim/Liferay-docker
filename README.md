@@ -73,11 +73,11 @@ Change the cluster name of elasticsearch
 ## Construct your container
 Execute the commands bellow to contruct your container
 
-    docker build -t iakim/liferay-docker .
-    docker create --name iakimv1 -p 8080:8080 -p 9990:9990 iakim/liferay-docker:latest
-    docker start iakimv1
-    docker exec -u jboss iakimv1 touch /opt/jboss/wildfly/standalone/deployments/ROOT.war.dodeploy
-    docker ps -a
+    # docker build -t iakim/liferay-docker .
+    # docker create --name iakimv1 -p 8080:8080 -p 9990:9990 iakim/liferay-docker:latest
+    # docker start iakimv1
+    # docker exec -u jboss iakimv1 touch /opt/jboss/wildfly/standalone/deployments/ROOT.war.dodeploy
+    # docker ps -a
     
 ## End Steps
 Log in portal http://localhost:8080/c/portal/login
@@ -87,6 +87,6 @@ Log in portal http://localhost:8080/c/portal/login
 ## Destroy your container and image
 Execute the commands bellow to destruct your container and your image
 
-    docker stop iakimv1
-    docker rm iakimv1
-    docker image rm iakim/liferay-docker:latest
+    # docker stop iakimv1
+    # docker rm iakimv1
+    # docker image rm iakim/liferay-docker:latest
