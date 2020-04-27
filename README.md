@@ -40,30 +40,9 @@ Get IP of elasticsearch container
 
     # docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' iakimv2
 
-Change the script for database hypersonic data/hypersonic/lportal.script
+ Change the 10.19.0.1 to IP of iakimv2 container
 
-    # vim data/hypersonic/lportal.script
-
-#### Change:
-
-    "\u000d\u000atransportAddresses=[ \\u000d\u000a  "localhost:9300",
-    
-#### For:    
-    
-    "\u000d\u000atransportAddresses=[ \\u000d\u000a  "{ip of elasticsearch container}:9300",
-    eg: "\u000d\u000atransportAddresses=[ \\u000d\u000a  "10.19.0.1:9300",
-
-Change the cluster name of elasticsearch
-
-    vim data/hypersonic/lportal.script
-
-### Change:
-
-    "\u000d\u000aclusterName="LiferayElasticsearchCluster"
-    
-### For:
-
-    "\u000d\u000aclusterName="docker-cluster"
+    # vim DEP/osgi/configs/com.liferay.portal.search.elasticsearch6.configuration.ElasticsearchConfiguration.config
 
 # Checkpoint
 
