@@ -15,12 +15,14 @@ The Elasticsearch 6.5.1 is a dependencies and clone this repository
     # docker create --name iakimv2 -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" docker.elastic.co/elasticsearch/elasticsearch:6.5.1
     # docker start iakimv2
     # git clone https://github.com/Iakim/Liferay-docker.git
+    # cd Liferay-docker
 
 ## Customize your installation
 
-Copy the folders, of your previous instalation, hypersonic, document_library and elasticsearch6 for data
+Copy the folders, of your previous instalation, hypersonic and document_library for data
 
-    # cp -r /opt/you_instalation_liferay_path/data/* data
+    # cp -r /opt/you_instalation_liferay_path/data/hypersonic/* data/hypersonic/
+    # cp -r /opt/you_instalation_liferay_path/data/document_library/* data/document_library/
 
 Copy your thema for folder DEP/osgi/war/
 
