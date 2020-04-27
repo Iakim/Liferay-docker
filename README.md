@@ -20,7 +20,7 @@ The Elasticsearch 6.5.1 is a dependencies and clone this repository
 
 Copy the folders, of your previous instalation, hypersonic, document_library and elasticsearch6 for data
 
-    # cp -r /opt/you_instalation_liferay_path/data/ data
+    # cp -r /opt/you_instalation_liferay_path/data/* data
 
 Copy your thema for folder DEP/osgi/war/
 
@@ -40,7 +40,7 @@ Get IP of elasticsearch container
 
 Change the script for database hypersonic data/hypersonic/lportal.script
 
-    vim data/hypersonic/lportal.script
+    # vim data/hypersonic/lportal.script
 
 #### Change:
 
@@ -65,30 +65,28 @@ Change the cluster name of elasticsearch
 
 # Checkpoint
 
-Docker runs correctly
-Install ElasticSearch 6.5.1 with docker
-Get a clone for the repository https://github.com/Iakim/Liferay-docker.git
-Customization your container with ALL the steps
+- Docker runs correctly
+- Install ElasticSearch 6.5.1 with docker
+- Get a clone for the repository https://github.com/Iakim/Liferay-docker.git
+- Customization your container with ALL the steps
 
 ## Construct your container
 Execute the commands bellow to contruct your container
 
-    docker build -t iakim/liferay-docker .
-    docker create --name iakimv1 -p 8080:8080 -p 9990:9990 iakim/liferay-docker:latest
-    docker start iakimv1
-    docker exec -u jboss iakimv1 touch /opt/jboss/wildfly/standalone/deployments/ROOT.war.dodeploy
-    docker ps -a
+    # docker build -t iakim/liferay-docker .
+    # docker create --name iakimv1 -p 8080:8080 -p 9990:9990 iakim/liferay-docker:latest
+    # docker start iakimv1
+    # docker exec -u jboss iakimv1 touch /opt/jboss/wildfly/standalone/deployments/ROOT.war.dodeploy
+    # docker ps -a
     
 ## End Steps
 Log in portal http://localhost:8080/c/portal/login
-
-Go to
 
     Control Panel -> Configuration -> Search -> Reindex all indexes of search
 
 ## Destroy your container and image
 Execute the commands bellow to destruct your container and your image
 
-    docker stop iakimv1
-    docker rm iakimv1
-    docker image rm iakim/liferay-docker:latest
+    # docker stop iakimv1
+    # docker rm iakimv1
+    # docker image rm iakim/liferay-docker:latest
