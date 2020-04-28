@@ -20,6 +20,8 @@ The Elasticsearch 6.5.1 is a dependencies and clone this repository
 
 ## Customize your installation
 
+### If you want a liferay from scratch, skip to "Review portal-ext.properties"
+
 Copy the folders, of your previous instalation, hypersonic and document_library for data
 
     # cp -r /opt/you_instalation_liferay_path/data/hypersonic/* data/hypersonic/
@@ -29,11 +31,11 @@ Copy your thema for folder DEP/osgi/war/
 
     # cp /opt/you_instalation_liferay_path/osgi/war/my_theme.war DEP/osgi/war
 
-Review portal-ext.properties
+Review portal-ext.properties **SKIP FOR HERE**
 
     # vim portal-ext.properties  
 
-Review standalone.conf
+Review standalone.conf 
 
     # vim standalone.conf
 
