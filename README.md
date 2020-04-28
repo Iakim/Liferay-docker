@@ -11,8 +11,9 @@ Run commands, if necessary, for start your docker service
 ## Dependencies
 The Elasticsearch 6.5.1 is a dependencies and clone this repository
 
+    # docker network create liferay
     # docker pull docker.elastic.co/elasticsearch/elasticsearch:6.5.1
-    # docker create --name iakimv2 -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" docker.elastic.co/elasticsearch/elasticsearch:6.5.1
+    # docker create --name iakimv2 -p 9200:9200 -p 9300:9300 --network liferay -e "discovery.type=single-node" docker.elastic.co/elasticsearch/elasticsearch:6.5.1
     # docker start iakimv2
     # git clone https://github.com/Iakim/Liferay-docker.git
     # cd Liferay-docker
@@ -36,17 +37,10 @@ Review standalone.conf
 
     # vim standalone.conf
 
-Get IP of elasticsearch container
-
-    # docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' iakimv2
-
- Change the 10.19.0.1 to IP of iakimv2 container
-
-    # vim DEP/osgi/configs/com.liferay.portal.search.elasticsearch6.configuration.ElasticsearchConfiguration.config
-
 # Checkpoint
 
 - Docker runs correctly
+- Create a network liferay
 - Install ElasticSearch 6.5.1 with docker
 - Get a clone for the repository https://github.com/Iakim/Liferay-docker.git
 - Customization your container with ALL the steps
@@ -55,7 +49,7 @@ Get IP of elasticsearch container
 Execute the commands bellow to contruct your container
 
     # docker build -t iakim/liferay-docker .
-    # docker create --name iakimv1 -p 8080:8080 -p 9990:9990 iakim/liferay-docker:latest
+    # docker create --name iakimv1 -p 8080:8080 -p 9990:9990 --network liferay  iakim/liferay-docker:latest
     # docker start iakimv1
     # docker exec -u jboss iakimv1 touch /opt/jboss/wildfly/standalone/deployments/ROOT.war.dodeploy
     # docker ps -a
