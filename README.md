@@ -59,8 +59,8 @@ Execute the commands bellow to contruct your container
 ## End Steps
 Log in portal http://localhost:8080/c/portal/login
 
-User: test@liferay.com
-Pass: test
+- User: test@liferay.com
+- Pass: test
 
     Control Panel -> Configuration -> Search -> Reindex all indexes of search
 
