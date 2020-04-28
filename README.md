@@ -1,4 +1,7 @@
-# Liferay Community Edition Portal 7.1.3 CE GA4 + Docker version 19.03.8
+# Liferay Community Edition Portal 7.1.3 CE GA4 + Docker version 19.03.8 
+
+Docker Hub Image (https://hub.docker.com/r/iakim/liferay-docker)
+
 Follow all this steps bellow for create with success your container
 
 ## Start Docker
