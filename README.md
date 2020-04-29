@@ -1,4 +1,7 @@
-# Liferay Community Edition Portal 7.1.3 CE GA4 + Docker version 19.03.8
+# Liferay Community Edition Portal 7.1.3 CE GA4 + Docker version 19.03.8 
+
+Docker Hub Image (https://hub.docker.com/r/iakim/liferay-docker)
+
 Follow all this steps bellow for create with success your container
 
 ## Start Docker
@@ -20,6 +23,8 @@ The Elasticsearch 6.5.1 is a dependencies and clone this repository
 
 ## Customize your installation
 
+### If you want a liferay from scratch, skip to "Review portal-ext.properties"
+
 Copy the folders, of your previous instalation, hypersonic and document_library for data
 
     # cp -r /opt/you_instalation_liferay_path/data/hypersonic/* data/hypersonic/
@@ -29,11 +34,11 @@ Copy your thema for folder DEP/osgi/war/
 
     # cp /opt/you_instalation_liferay_path/osgi/war/my_theme.war DEP/osgi/war
 
-Review portal-ext.properties
+Review portal-ext.properties **SKIP FOR HERE**
 
     # vim portal-ext.properties  
 
-Review standalone.conf
+Review standalone.conf 
 
     # vim standalone.conf
 
@@ -56,6 +61,9 @@ Execute the commands bellow to contruct your container
     
 ## End Steps
 Log in portal http://localhost:8080/c/portal/login
+
+- User: test@liferay.com
+- Pass: test
 
     Control Panel -> Configuration -> Search -> Reindex all indexes of search
 
