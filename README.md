@@ -4,16 +4,25 @@ Docker Hub Image (https://hub.docker.com/r/iakim/liferay-docker)
 
 Follow all this steps bellow for create with success your container
 
-In process of migration for docker compose!
-
 ## Start Docker
 Run commands, if necessary, for start your docker service
 
     # mkdir /sys/fs/cgroup/systemd
     # mount -t cgroup -o none,name=systemd cgroup /sys/fs/cgroup/systemd
     # service docker start
+    
+ ## Docker Compose
+ If you want a liferay from scratch follow this step
+ 
+    # cd /tmp
+    # curl -o https://raw.githubusercontent.com/Iakim/Liferay-docker/master/docker-compose.yml
+    # docker-compose up --no-start
+    # docker-compose start tmp_iakimv2
+    # docker-compose start tmp_iakimv1
+    
+## The steps below are for you to transform your liferay installation into a docker container, with themes, modules, database and document library.
 
-## Dependencies
+### Dependencies
 The Elasticsearch 6.5.1 is a dependencies and clone this repository
 
     # docker network create liferay
@@ -23,9 +32,7 @@ The Elasticsearch 6.5.1 is a dependencies and clone this repository
     # git clone https://github.com/Iakim/Liferay-docker.git
     # cd Liferay-docker
 
-## Customize your installation
-
-### If you want a liferay from scratch, skip to "Review portal-ext.properties"
+### Customize your installation
 
 Copy the folders, of your previous instalation, hypersonic and document_library for data
 
@@ -34,9 +41,13 @@ Copy the folders, of your previous instalation, hypersonic and document_library 
 
 Copy your thema for folder DEP/osgi/war/
 
-    # cp /opt/you_instalation_liferay_path/osgi/war/my_theme.war DEP/osgi/war
+    # cp /opt/you_instalation_liferay_path/osgi/war/my_theme.war DEP/osgi/war/
+    
+Copy your modules fot folder DEP/osgi/modules
 
-Review portal-ext.properties **SKIP FOR HERE**
+    # cp /opt/you_instalation_liferay_path/osgi/modules/* DEP/osgi/modules/
+
+Review portal-ext.properties
 
     # vim portal-ext.properties  
 
@@ -44,7 +55,7 @@ Review standalone.conf
 
     # vim standalone.conf
 
-# Checkpoint
+### Checkpoint
 
 - Docker runs correctly
 - Create a network liferay
@@ -52,7 +63,7 @@ Review standalone.conf
 - Get a clone for the repository https://github.com/Iakim/Liferay-docker.git
 - Customization your container with ALL the steps
 
-## Construct your container
+### Construct your container
 Execute the commands bellow to contruct your container
 
     # docker build -t iakim/liferay-docker .
@@ -61,7 +72,7 @@ Execute the commands bellow to contruct your container
     # docker exec -u jboss iakimv1 touch /opt/jboss/wildfly/standalone/deployments/ROOT.war.dodeploy
     # docker ps -a
     
-## See Logs
+### See Logs
 JBoss WildFly Logs
 
     # docker logs -f iakimv1
@@ -70,7 +81,7 @@ Liferay Logs
 
     # y=`date +%Y`; m=`date +%m`; d=`date +%d`; docker exec -it iakimv1 tail -f /opt/jboss/logs/liferay.$y-$m-$d.log
 
-## End Steps
+### End Steps
 Log in portal http://localhost:8080/c/portal/login
 
 - User: test@liferay.com
@@ -78,7 +89,7 @@ Log in portal http://localhost:8080/c/portal/login
 
     Control Panel -> Configuration -> Search -> Reindex all indexes of search
 
-## Destroy your container and image
+### Destroy your container and image
 Execute the commands bellow to destruct your container and your image
 
     # docker stop iakimv1
