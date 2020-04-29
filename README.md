@@ -4,6 +4,8 @@ Docker Hub Image (https://hub.docker.com/r/iakim/liferay-docker)
 
 Follow all this steps bellow for create with success your container
 
+In process of migration for docker compose!
+
 ## Start Docker
 Run commands, if necessary, for start your docker service
 
