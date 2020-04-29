@@ -58,8 +58,16 @@ Execute the commands bellow to contruct your container
     # docker start iakimv1
     # docker exec -u jboss iakimv1 touch /opt/jboss/wildfly/standalone/deployments/ROOT.war.dodeploy
     # docker ps -a
+    
+## See Logs
+JBoss WildFly Logs
+
     # docker logs -f iakimv1
     
+Liferay Logs
+
+    # y=`date +%Y`; m=`date +%m`; d=`date +%d`; docker exec -it iakimv1 tail -f /opt/jboss/logs/liferay.$y-$m-$d.log
+
 ## End Steps
 Log in portal http://localhost:8080/c/portal/login
 
