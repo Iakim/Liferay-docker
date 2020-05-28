@@ -47,7 +47,7 @@ Copy your modules fot folder DEP/osgi/modules
 
     # cp /opt/you_instalation_liferay_path/osgi/modules/* DEP/osgi/modules/
     
-Update the lportl.script
+Update the lportal.script
 
     # sed -i 's/a  \".*:9300\"/a  \"iakimv2:9300\"/' data/hypersonic/lportal.script
     # sed -i 's/aclusterName=\".*u000d\\u000ad/aclusterName=\"docker-cluster\"\\u000d\\u000ad/' data/hypersonic/lportal.script
