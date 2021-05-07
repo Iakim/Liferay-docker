@@ -14,6 +14,7 @@ Run commands, if necessary, for start your docker service
  ## Docker Compose
  If you want a liferay from scratch follow this step
  
+    # yum install docker-compose
     # cd /tmp
     # curl "https://raw.githubusercontent.com/Iakim/Liferay-docker/master/docker-compose.yml" -o docker-compose.yml
     # docker-compose up --no-start
