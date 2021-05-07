@@ -17,8 +17,8 @@ Run commands, if necessary, for start your docker service
     # cd /tmp
     # curl "https://raw.githubusercontent.com/Iakim/Liferay-docker/master/docker-compose.yml" -o docker-compose.yml
     # docker-compose up --no-start
-    # docker-compose start tmp_iakimv2
-    # docker-compose start tmp_iakimv1
+    # docker start tmp_iakimv2
+    # docker start tmp_iakimv1
     
 ## The steps below are for you to transform your liferay installation into a docker container, with themes, modules, database and document library.
 
