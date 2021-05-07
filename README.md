@@ -15,7 +15,7 @@ Run commands, if necessary, for start your docker service
  If you want a liferay from scratch follow this step
  
     # cd /tmp
-    # curl -o https://raw.githubusercontent.com/Iakim/Liferay-docker/master/docker-compose.yml
+    # curl "https://raw.githubusercontent.com/Iakim/Liferay-docker/master/docker-compose.yml" -o docker-compose.yml
     # docker-compose up --no-start
     # docker-compose start tmp_iakimv2
     # docker-compose start tmp_iakimv1
